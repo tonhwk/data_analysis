@@ -10,8 +10,21 @@ data = {
     'Value': [100, 120, 110, 130, 125]
 }
 
+# Generate additional timestamps
+additional_dates = pd.date_range(start='2022-01-06', periods=95, freq='D')
+additional_values = [130 + i for i in range(95)]  # Incremental values starting from 130
+
+# Append additional data to DataFrame
+additional_data = {
+    'Timestamp': additional_dates.strftime('%Y-%m-%d'),
+    'Value': additional_values
+}
+df_additional = pd.DataFrame(additional_data)
+
+
 # Create a DataFrame from the data
 df = pd.DataFrame(data)
+df = pd.concat([df, df_additional], ignore_index=True)
 df['Timestamp'] = pd.to_datetime(df['Timestamp'])
 df.set_index('Timestamp', inplace=True)
 
