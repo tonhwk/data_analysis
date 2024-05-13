@@ -70,6 +70,22 @@ plt.ylabel('Count')
 plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
 plt.show()
 
+#Mergin YOLO and Absurd categories into Single
+df['Marital_Status'].replace(['YOLO', 'Absurd', 'Alone'], 'Single', inplace=True)
+
+# Get the updated value counts
+marital_status_counts_updated = df['Marital_Status'].value_counts()
+
+# Plot the updated value counts
+plt.figure(figsize=(10, 6))
+marital_status_counts_updated.plot(kind='bar')
+plt.title('Marital Status Distribution (Updated)')
+plt.xlabel('Marital Status')
+plt.ylabel('Count')
+plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
+plt.show()
+
+
 
 
 

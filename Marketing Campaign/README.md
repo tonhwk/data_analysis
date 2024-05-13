@@ -28,6 +28,10 @@ After handling duplicates we went from 2240 entries to 2058.
 * Plotting Marital Status
 ![Marital Status](marital_status.png)
 
+I will merge YOLO and absurd categories into Single. After that update the table looks as follows.
+
+![Marital Status Updated](marital_status_updated.png)
+
 
 
 
