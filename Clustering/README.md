@@ -18,4 +18,4 @@ The script generates a scatter plot of the original dataset and another scatter 
 - [Scikit-learn Documentation - KMeans](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html)
 
 ## Author
-John Doe (john.doe@example.com)
+Antonio Martinez (andresreg93@gmail.com)
