@@ -25,4 +25,9 @@ After handling duplicates we went from 2240 entries to 2058.
 * Plotting Education Proportions
 ![Education Proportions](education_proportions.png)
 
+* Plotting Marital Status
+![Marital Status](marital_status.png)
+
+
+
 

@@ -58,6 +58,18 @@ p.gca().add_artist(my_circle)
 
 plt.show()
 
+# Get the value counts
+marital_status_counts = df['Marital_Status'].value_counts()
+
+# Plot the value counts
+plt.figure(figsize=(10, 6))
+marital_status_counts.plot(kind='bar')
+plt.title('Marital Status Distribution')
+plt.xlabel('Marital Status')
+plt.ylabel('Count')
+plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
+plt.show()
+
 
 
 
