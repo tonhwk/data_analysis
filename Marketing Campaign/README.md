@@ -22,4 +22,7 @@ After handling duplicates we went from 2240 entries to 2058.
 * Plotting Customers Yearly Income Distribution
 ![Customers Yearly Income Distribution](customers_yearly_income_distribution.png)
 
+* Plotting Education Proportions
+![Education Proportions](education_proportions.png)
+
 

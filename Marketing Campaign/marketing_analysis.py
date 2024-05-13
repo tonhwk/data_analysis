@@ -31,9 +31,33 @@ df.info()
 #Lets plot something :D
 plt.figure(figsize=(24, 6))
 plt.title('Customers yearly household income distribution')
-ax = sns.distplot(df.query('Income < 150000')['Income'], rug=True)
+ax = sns.displot(df.query('Income < 150000')['Income'], rug=True)
 
 plt.show()
+
+#Finding nulls
+print(f'There are {df["Income"].isna().sum()} missing Income values')
+
+#Transforming 2n Cycle and Graduation variables into a more specific and clear variables such as Master and Bachelor.
+df['Education'].replace(['2n Cycle', 'Graduation'], 
+                          ['Master', 'Bachelor'], inplace=True)
+
+#Plotting corresponding proportions for education in the dataset
+PALETTE = sns.color_palette("Set2")
+sizes = dict(df['Education'].value_counts())
+
+plt.figure(figsize=(12, 8))
+plt.title("Education degrees proportion")
+plt.pie(sizes.values(), labels=sizes.keys(), autopct="%.1f%%", pctdistance=0.85, shadow=True, colors=PALETTE)
+plt.legend(title="Client's eduation", labels=sizes.keys(), bbox_to_anchor=(1, 1))
+
+# add a circle at the center to transform it in a donut chart
+my_circle=plt.Circle( (0,0), 0.7, color='white')
+p=plt.gcf()
+p.gca().add_artist(my_circle)
+
+plt.show()
+
 
 
 
