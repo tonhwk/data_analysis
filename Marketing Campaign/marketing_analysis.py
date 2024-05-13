@@ -1,4 +1,6 @@
 import pandas as pd
+from matplotlib import pyplot as plt
+import seaborn as sns
 
 # Load the dataset from a CSV file
 df = pd.read_csv('marketing_campaign.csv', sep='\t', 
@@ -17,7 +19,23 @@ df.info()
 print(df['Z_Revenue'].value_counts())
 print(df['Z_CostContact'].value_counts())
 
+#Two columns that were never mentioned in the dataset
 df.drop(columns=['Z_Revenue', 'Z_CostContact'], inplace=True)
+
+#Handling duplicates
+df[df.duplicated(keep=False)].sort_values(by='Income')
+df[df.duplicated(keep='first')]
+df.drop_duplicates(inplace=True)
+df.info()
+
+#Lets plot something :D
+plt.figure(figsize=(24, 6))
+plt.title('Customers yearly household income distribution')
+ax = sns.distplot(df.query('Income < 150000')['Income'], rug=True)
+
+plt.show()
+
+
 
 
 
