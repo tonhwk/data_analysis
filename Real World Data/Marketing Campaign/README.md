@@ -1,4 +1,4 @@
-# Data Exploration:
+# Exploratory Data Analysys (EDA):
 
 * Loading the dataset. 
 * Take a look at the first few rows of the dataset to understand its structure and column names.
@@ -19,13 +19,13 @@ df_cleaned = df.drop_duplicates()
 * Handling duplicates
 After handling duplicates we went from 2240 entries to 2058.
 
-* Plotting Customers Yearly Income Distribution
+Plotting Customers Yearly Income Distribution
 ![Customers Yearly Income Distribution](customers_yearly_income_distribution.png)
 
-* Plotting Education Proportions
+Plotting Education Proportions
 ![Education Proportions](education_proportions.png)
 
-* Plotting Marital Status
+Plotting Marital Status
 ![Marital Status](marital_status.png)
 
 I will merge YOLO and absurd categories into Single. After that update the table looks as follows.
