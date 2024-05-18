@@ -1,0 +1,11 @@
+Date,Product,Price,Quantity,Customer
+2022-01-01,Product A,100,2,Customer1
+2022-01-01,Product B,150,1,Customer2
+2022-01-02,Product A,100,3,Customer3
+2022-01-02,Product C,200,1,Customer4
+2022-01-03,Product B,150,2,Customer5
+2022-01-03,Product A,100,1,Customer6
+2022-01-04,Product C,200,2,Customer7
+2022-01-04,Product A,100,3,Customer8
+2022-01-05,Product B,150,1,Customer9
+2022-01-05,Product C,200,2,Customer10
