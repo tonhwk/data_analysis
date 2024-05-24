@@ -42,3 +42,46 @@ FROM sales s
 JOIN customers c ON s.customer_id = c.customer_id
 JOIN products p ON s.product_id = p.product_id;
 ```
+
+### Aggregation Query
+```sql
+SELECT c.first_name, c.last_name, SUM(s.total_amount) AS total_spent
+FROM sales s
+JOIN customers c ON s.customer_id = c.customer_id
+GROUP BY c.customer_id
+ORDER BY total_spent DESC;
+```
+
+### Advanced Query
+```sql
+-- Find top-selling product categories
+SELECT category, SUM(quantity) AS total_sold
+FROM sales s
+JOIN products p ON s.product_id = p.product_id
+GROUP BY category
+ORDER BY total_sold DESC;
+
+-- Calculate monthly sales totals
+SELECT DATE_FORMAT(sale_date, '%Y-%m') AS month, SUM(total_amount) AS monthly_sales
+FROM sales
+GROUP BY month
+ORDER BY month;
+```
+
+### Reporting Query
+```sql
+-- Monthly sales per customer
+SELECT c.first_name, c.last_name, DATE_FORMAT(s.sale_date, '%Y-%m') AS month, SUM(s.total_amount) AS monthly_spent
+FROM sales s
+JOIN customers c ON s.customer_id = c.customer_id
+GROUP BY c.customer_id, month
+ORDER BY c.customer_id, month;
+
+-- Product performance analysis
+SELECT p.product_name, COUNT(s.sale_id) AS times_sold, SUM(s.total_amount) AS total_revenue
+FROM sales s
+JOIN products p ON s.product_id = p.product_id
+GROUP BY p.product_id
+ORDER BY total_revenue DESC;
+
+```
