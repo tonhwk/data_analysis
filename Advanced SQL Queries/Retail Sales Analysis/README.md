@@ -85,3 +85,8 @@ GROUP BY p.product_id
 ORDER BY total_revenue DESC;
 
 ```
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+For any questions or feedback, please contact Antonio Martinez at andresreg93@gmail.com.
