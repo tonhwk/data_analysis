@@ -6,7 +6,9 @@ This project demonstrates the use of SQL for basic querying and database managem
 
 ## File Descriptions 
 ### 1. Create Database 
-```sql CREATE DATABASE retail_sales_analysis;```
+```sql 
+CREATE DATABASE retail_sales_analysis;
+```
 Creates a new database named retail_sales_analysis.
 
 
