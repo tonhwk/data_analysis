@@ -52,7 +52,6 @@ ORDER BY cs.total_spent DESC;
 **Description:** This file includes examples of window functions, which perform calculations across a set of table rows related to the current row, such as ranking, partitioning, and calculating running totals.
 
 **Example Queries:**
-
 Using ROW_NUMBER(), RANK(), and DENSE_RANK()
 
 ```sql
@@ -72,8 +71,9 @@ SELECT
     DENSE_RANK() OVER (ORDER BY cs.total_spent DESC) AS dense_rank
 FROM customers c
 JOIN CustomerSales cs ON c.customer_id = cs.customer_id;
-Using NTILE()
 ```
+
+Using NTILE()
 ```sql
 WITH CustomerSales AS (
     SELECT 
@@ -89,9 +89,9 @@ SELECT
     NTILE(4) OVER (ORDER BY cs.total_spent DESC) AS quartile
 FROM customers c
 JOIN CustomerSales cs ON c.customer_id = cs.customer_id;
-Using LEAD() and LAG()
 ```
 
+Using LEAD() and LAG()
 ```sql
 WITH CustomerSales AS (
     SELECT 
@@ -109,8 +109,8 @@ SELECT
 FROM customers c
 JOIN CustomerSales cs ON c.customer_id = cs.customer_id;
 ```
-Calculating Running Totals and Moving Averages
 
+Calculating Running Totals and Moving Averages
 ```sql
 WITH MonthlySales AS (
     SELECT 
