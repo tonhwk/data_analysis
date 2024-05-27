@@ -9,6 +9,7 @@ This repository contains SQL queries demonstrating data aggregation and grouping
 **File:** `1_group_by.sql`
 
 **Example Query:**
+Using Using GORUP BY
 ```sql
 -- Example: Grouping sales data by product category and calculating total sales amount for each category
 SELECT category, SUM(total_amount) AS total_sales
@@ -20,6 +21,7 @@ GROUP BY category;
 **File:**  `2_having.sql`
 
 **Example Query:**
+Using Using HAVING
 
 ```sql
 SELECT category, SUM(total_amount) AS total_sales
