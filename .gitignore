@@ -1,0 +1,3 @@
+# .gitignore
+.env
+/Natural Language Processing/venv
